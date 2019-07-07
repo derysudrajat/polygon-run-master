@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class camera : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int rotationSpeed;
+    public int rotationSpeed;    
     void Start()
     {
         
