@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Kapsul : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Kapsul : MonoBehaviour
     public int rotationSpeed;
     public int jumpHeight;
     public float jumpSpeed;
+    [SerializeField] private string namaScene;
     Rigidbody rb;    
 
     void Start()
@@ -40,8 +42,13 @@ public class Kapsul : MonoBehaviour
         }
         if (col.gameObject.tag == "WinFlag")
         {
+            SceneManager.LoadScene(namaScene);
             print("Object: WinFlag");
         }
+        if (col.gameObject.tag == "Coin")
+        {
+            print("Object: Coin");
+        }        
     }
 
     // Update is called once per frame
