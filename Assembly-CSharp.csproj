@@ -67,7 +67,14 @@
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\MaterialMover.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\Rotator.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\WheelController.cs" />
+    <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_Demo.cs" />
+    <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_UIs.cs" />
+    <Compile Include="Assets\GE Common Assets\GE Toggle Full Screen\Scripts\GE_ToggleFullScreenUI.cs" />
+    <Compile Include="Assets\GE Common Assets\Scripts\GE_UIResponder.cs" />
+    <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\AurynSky\ArenaPacks\Forest Pack\READ ME.txt" />
+    <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient references.txt" />
+    <None Include="Assets\GE Common Assets\Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>F:/Unity Project/polygon-run-master/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
