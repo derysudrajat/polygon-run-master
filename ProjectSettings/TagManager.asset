@@ -10,6 +10,7 @@ TagManager:
   - DoorFinish
   - Coin
   - WinFlag
+  - WaterFall
   layers:
   - Default
   - TransparentFX

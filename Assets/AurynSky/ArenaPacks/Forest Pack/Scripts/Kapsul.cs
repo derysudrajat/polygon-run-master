@@ -1,23 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Kapsul : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame update    
     public bool isGrounded;
     public bool isLadder;
     public int moveSpeed;
     public int rotationSpeed;
     public int jumpHeight;
     public float jumpSpeed;
+    public int mCoin;
+    public int mHealth;
+    public Text txtHealth;
+    public Text txtCoin;    
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform origTrans;
     [SerializeField] private string namaScene;
     Rigidbody rb;    
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();        
     }
 
     void OnCollisionEnter(Collision col)
@@ -47,8 +54,24 @@ public class Kapsul : MonoBehaviour
         }
         if (col.gameObject.tag == "Coin")
         {
-            print("Object: Coin");
+            GameObject mCoin = col.gameObject;
+            mCoin.SetActive(false);
+            this.mCoin += 1;
+            txtCoin.text = this.mCoin.ToString();
         }        
+        if (col.gameObject.tag=="WaterFall")
+        {
+            if (mHealth <=1)
+            {
+                txtHealth.text = "Die";
+            }
+            else
+            {
+                mHealth -= 1;
+                txtHealth.text = mHealth.ToString();
+            }
+            player.transform.position = origTrans.transform.position;
+        }
     }
 
     // Update is called once per frame
