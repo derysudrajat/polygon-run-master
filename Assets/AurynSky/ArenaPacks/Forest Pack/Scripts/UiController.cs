@@ -7,6 +7,7 @@ public class UiController : MonoBehaviour
 {
     public float totalTime; //3 minutes
     public Text timer;
+    [SerializeField] private GameObject timUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,8 @@ public class UiController : MonoBehaviour
             UpdateLevelTimer(totalTime);
         }else
         {
-            timer.text = "Timeup";
+            timer.text = "00:00";
+            timUp.SetActive(true);
         }
         
     }

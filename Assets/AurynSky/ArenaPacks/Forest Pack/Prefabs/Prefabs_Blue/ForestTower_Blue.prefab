@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4144064140715692}
   - component: {fileID: 137077949762680104}
+  - component: {fileID: 1843166647892845641}
   m_Layer: 0
   m_Name: ForestFlag
   m_TagString: Untagged
@@ -85,6 +86,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0056512053, y: 0.0051295497, z: 0.000019247935}
     m_Extent: {x: 0.012804773, y: 0.005948914, z: 0.00081071793}
   m_DirtyAABB: 0
+--- !u!64 &1843166647892845641
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019396697105526}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &1050150846803224
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4493946273470616}
+  - component: {fileID: 3500278145581900616}
   m_Layer: 0
   m_Name: FlagArm
   m_TagString: Untagged
@@ -899,6 +915,20 @@ Transform:
   m_Father: {fileID: 4512261918196122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &3500278145581900616
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556061257146230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &1570466237269070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,7 +1285,6 @@ GameObject:
   - component: {fileID: 4072828905429358}
   - component: {fileID: 33829433565276502}
   - component: {fileID: 23788206743257480}
-  - component: {fileID: 956110390396136365}
   m_Layer: 0
   m_Name: ForestTower_Blue
   m_TagString: Untagged
@@ -1329,19 +1358,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &956110390396136365
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770514590405088}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.999999, y: 4.07493, z: 4.000001}
-  m_Center: {x: -0.022491932, y: 2.0614266, z: -0.14614534}
 --- !u!1 &1805820199700862
 GameObject:
   m_ObjectHideFlags: 0
