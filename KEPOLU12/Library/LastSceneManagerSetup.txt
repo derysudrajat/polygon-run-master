@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/AurynSky/ArenaAssets/Desert Arena/Scenes/DemoScene.unity
+  isLoaded: 1
+  isActive: 1
