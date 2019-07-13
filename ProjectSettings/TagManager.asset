@@ -11,6 +11,7 @@ TagManager:
   - Coin
   - WinFlag
   - WaterFall
+  - Star
   layers:
   - Default
   - TransparentFX

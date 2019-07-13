@@ -9,22 +9,40 @@ public class Kapsul : MonoBehaviour
     // Start is called before the first frame update    
     public bool isGrounded;
     public bool isLadder;
-    public int moveSpeed;
-    public int rotationSpeed;
+    public float moveSpeed;
+    public float rotationSpeed;
     public int jumpHeight;
     public float jumpSpeed;
+
+    public int targetCoin;
+
     public int mCoin;
     public int mHealth;
+
+    public float totalTime; //3 minutes
+    public Text timer;
+
+    private bool isnotover = false;
+
     public Text txtHealth;
-    public Text txtCoin;    
+    public Text txtCoin;        
+
     [SerializeField] private Transform player;
     [SerializeField] private Transform origTrans;
-    [SerializeField] private string namaScene;
-    Rigidbody rb;    
+    [SerializeField] private string namaScene;    
+    [SerializeField] private GameObject mainPanel;
+    [SerializeField] private GameObject nextStage;
+    [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject timUp;
+
+    Rigidbody rb;
+    public float scrollSpeed = 0.5F;
+    public Renderer rend;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();        
+        rb = GetComponent<Rigidbody>();
+        rend = GetComponent<Renderer>();
     }
 
     void OnCollisionEnter(Collision col)
@@ -49,8 +67,16 @@ public class Kapsul : MonoBehaviour
         }
         if (col.gameObject.tag == "WinFlag")
         {
-            SceneManager.LoadScene(namaScene);
-            print("Object: WinFlag");
+            if (mCoin == targetCoin)
+            {
+                nextStage.SetActive(true);
+                isnotover = false;
+            }
+            else
+            {
+                print("Object: Please Collect All Coin");
+            }
+            
         }
         if (col.gameObject.tag == "Coin")
         {
@@ -63,7 +89,9 @@ public class Kapsul : MonoBehaviour
         {
             if (mHealth <=1)
             {
-                txtHealth.text = "Die";
+                txtHealth.text = "0";
+                gameOver.SetActive(true);
+                isnotover = false;
             }
             else
             {
@@ -77,33 +105,75 @@ public class Kapsul : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
-        Vector3 rotation = transform.eulerAngles;
-        rotation.y += Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime; // Standart Left-/Right Arrows and A & D Keys
-        transform.eulerAngles = rotation;
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || isLadder))
+        if (timUp.active)
         {
-            rb.AddForce(new Vector3(0, jumpHeight, 0) * jumpSpeed, ForceMode.Impulse);
-            isGrounded = false;
-            if (isLadder)
+            isnotover = false;
+            timer.text = "00:00";
+        }
+        if (mainPanel.active)
+        {
+           if(timUp.active||nextStage.active||gameOver.active)
             {
-                isLadder = false;
+                isnotover = false;
+            }
+            else
+            {
+                isnotover = true;
+            }            
+        }        
+        if (isnotover)
+        {
+            transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+            Vector3 rotation = transform.eulerAngles;
+            rotation.y += Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime; // Standart Left-/Right Arrows and A & D Keys
+            transform.eulerAngles = rotation;
+            float offset = Time.time * scrollSpeed;
+            rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
+            if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || isLadder))
+            {
+                rb.AddForce(new Vector3(0, jumpHeight, 0) * jumpSpeed, ForceMode.Impulse);
+                isGrounded = false;
+                if (isLadder)
+                {
+                    isLadder = false;
+                }
+            }
+            if (Input.GetAxis("Mouse X") < 0)
+            {
+                //Code for action on mouse moving left
+                print("Mouse moved left");
+            }
+            if (Input.GetAxis("Mouse X") > 0)
+            {
+                //Code for action on mouse moving right
+                print("Mouse moved right");
+            }
+
+            if (totalTime > 0)
+            {
+                totalTime -= Time.deltaTime;
+                UpdateLevelTimer(totalTime);
+            }
+            else
+            {
+                timer.text = "00:00";
+                timUp.SetActive(true);                
             }
         }
-        if (Input.GetAxis("Mouse X") < 0)
+    }
+    public void UpdateLevelTimer(float totalSeconds)
+    {
+        int minutes = Mathf.FloorToInt(totalSeconds / 60f);
+        int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+
+        string formatedSeconds = seconds.ToString();
+
+        if (seconds == 60)
         {
-            //Code for action on mouse moving left
-            print("Mouse moved left");
+            seconds = 0;
+            minutes += 1;
         }
-        if (Input.GetAxis("Mouse X") > 0)
-        {
-            //Code for action on mouse moving right
-            print("Mouse moved right");
-        }
-        if (gameObject.tag == "Coin")
-        {
-            print("Coin uuuuuu");
-        }
-        
+
+        timer.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 }
