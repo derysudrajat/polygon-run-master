@@ -66,10 +66,13 @@
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\Kapsul.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\LoadScene.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\MaterialMover.cs" />
+    <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\MaterialRotator.cs" />
+    <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\OffsetManager.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\PlayerController.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\Respawn.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\Rotator.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\RotatorL.cs" />
+    <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\SkyRotator.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\UiController.cs" />
     <Compile Include="Assets\AurynSky\ArenaPacks\Forest Pack\Scripts\WheelController.cs" />
     <Compile Include="Assets\Fantasy Skybox FREE\Demo\Scripts\GE_FantasySkyboxFREE_Demo.cs" />
@@ -79,6 +82,7 @@
     <Compile Include="Assets\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\AurynSky\ArenaPacks\Forest Pack\READ ME.txt" />
+    <None Include="Assets\SimpleSky\ReadMe.txt" />
     <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient references.txt" />
     <None Include="Assets\GE Common Assets\Readme.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

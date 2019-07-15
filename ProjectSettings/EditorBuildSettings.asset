@@ -9,8 +9,14 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/AurynSky/ArenaPacks/Forest Pack/Scenes/Menu.unity
+    guid: 9f2dc057ddb347648aead41f34e7d432
+  - enabled: 1
     path: Assets/AurynSky/ArenaPacks/Forest Pack/Scenes/DemoScene.unity
     guid: cc3394a362c052545b42823ea9539668
+  - enabled: 1
+    path: Assets/AurynSky/ArenaAssets/Desert Arena/Scenes/Desert.unity
+    guid: a9997c5b67a6f484883b17f492c76c5f
   - enabled: 1
     path: Assets/AurynSky/ArenaPacks/Forest Pack/Scenes/Begining.unity
     guid: 64293def2220d7e4396b0b5d79920e9f

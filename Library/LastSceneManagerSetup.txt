@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AurynSky/ArenaAssets/Desert Arena/Scenes/Desert.unity
+- path: Assets/AurynSky/ArenaPacks/Forest Pack/Scenes/Menu.unity
   isLoaded: 1
   isActive: 1

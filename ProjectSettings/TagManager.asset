@@ -12,6 +12,7 @@ TagManager:
   - WinFlag
   - WaterFall
   - Star
+  - Hurt
   layers:
   - Default
   - TransparentFX

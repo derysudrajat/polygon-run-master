@@ -61,12 +61,32 @@ public class Kapsul : MonoBehaviour
         {
             print("Object: DoorStart");
         }
+        if (col.gameObject.tag == "Hurt")
+        {
+            float force = 3;            
+            Vector3 dir = col.contacts[0].point - transform.position;            
+            dir = -dir.normalized;
+            rb.AddForce(new Vector3(0, jumpHeight, force) * jumpSpeed, ForceMode.Impulse);            
+            if (mHealth <= 1)
+            {
+                txtHealth.text = "0";
+                gameOver.SetActive(true);
+                isnotover = false;
+            }
+            else
+            {
+                mHealth -= 1;
+                txtHealth.text = mHealth.ToString();
+            }            
+
+
+        }
         if (col.gameObject.tag == "DoorFinish")
         {
             print("Object: DoorFinish");
         }
         if (col.gameObject.tag == "WinFlag")
-        {
+        {            
             if (mCoin == targetCoin)
             {
                 nextStage.SetActive(true);
@@ -83,7 +103,7 @@ public class Kapsul : MonoBehaviour
             GameObject mCoin = col.gameObject;
             mCoin.SetActive(false);
             this.mCoin += 1;
-            txtCoin.text = this.mCoin.ToString();
+            txtCoin.text = this.mCoin.ToString()+" / "+this.targetCoin.ToString();
         }        
         if (col.gameObject.tag=="WaterFall")
         {
