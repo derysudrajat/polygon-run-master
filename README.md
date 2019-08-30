@@ -14,13 +14,13 @@ another rules :
 4. you can add heart by collect heart piece on whole stage
 
 ## Control
-`ArrowUp` - Go Forward
+`ArrowUp | ▲` - Go Forward
 
-`ArrowDown` - Go Backward
+`ArrowDown | ▼` - Go Backward
 
-`ArrowLeft` - Turn Left
+`ArrowLeft | ◄` - Turn Left
 
-`ArrowRight` - Turn Right
+`ArrowRight | ►` - Turn Right
 
 `Sapace` - Jump
 
