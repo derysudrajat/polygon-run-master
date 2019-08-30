@@ -22,7 +22,7 @@ another rules :
 
 `ArrowRight | ►` - Turn Right
 
-`Sapace` - Jump
+`Space` - Jump
 
 ## Quick Play
 open `main` folder on this repository, find `Polygon Run.exe` to quick play
