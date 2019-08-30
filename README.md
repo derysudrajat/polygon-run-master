@@ -13,7 +13,7 @@ another rules :
 3. you only have 3 life hearth on start
 4. you can add heart by collect heart piece on whole stage
 
-## Controll
+## Control
 `ArrowUp` - Go Forward
 
 `ArrowDown` - Go Backward
@@ -24,5 +24,5 @@ another rules :
 
 `Sapace` - Jump
 
-## Play Instant
-open `main` folder on this repository, find `Polygon Run.exe` to play instant.
+## Quick Play
+open `main` folder on this repository, find `Polygon Run.exe` to quick play
