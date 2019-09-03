@@ -10,7 +10,7 @@ if you have finished collect all coin go find `Red Flag` to go to next Stage.
 another rules :
 1. don't fall out the stage it can reduce your health
 2. dont't hit cactus it also can reduce your health
-3. you only have 3 life hearth on start
+3. you only have 3 life heart on start game
 4. you can add heart by collect heart piece on whole stage
 
 ## Control
