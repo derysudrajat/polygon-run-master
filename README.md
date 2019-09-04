@@ -26,3 +26,4 @@ another rules :
 
 ## Quick Play
 open `main` folder on this repository, find `Polygon Run.exe` to quick play
+or you can download the main file [here](https://drive.google.com/file/d/1Olvgdrb7gQ2IhokFq0IOp-ZbNqSp21kA/view)
